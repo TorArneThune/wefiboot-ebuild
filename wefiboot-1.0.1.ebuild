@@ -14,11 +14,11 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=""
+DEPEND="dev-util/gtk-update-icon-cache"
 RDEPEND="${DEPEND}
-		x11-libs/gksu
-		gnome-base/gnome
-		sys-apps/systemd"
+	x11-libs/gksu
+	x11-themes/hicolor-icon-theme
+	sys-apps/systemd"
 
 src_install() {
 	dosbin wefiboot.sh
