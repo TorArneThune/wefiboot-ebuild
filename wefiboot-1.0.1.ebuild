@@ -15,13 +15,16 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+		x11-libs/gksu
+		gnome-base/gnome
+		sys-apps/systemd"
 
 src_install() {
 	dosbin wefiboot.sh
 	insinto /etc
 	doins wefiboot.conf
-    doicon -s scalable windows-10.svg
+	doicon -s scalable windows-10.svg
 	domenu wefiboot.desktop
 }
 
