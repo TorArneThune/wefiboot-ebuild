@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<upstream>
+		<maintainer status="active">
+			<name>Tor Arne Thune</name>
+			<email>inmet@devia.org</email>
+		</maintainer>
+		<bugs-to>https://github.com/TorArneThune/wefiboot/issues</bugs-to>
+		<changelog>https://github.com/TorArneThune/wefiboot/commits/master</changelog>
+		<remote-id type="github">wefiboot</remote-id>
+	</upstream>
+	<maintainer type="person">
+		<name>Tor Arne Thune</name>
+		<email>inmet@devia.org</email>
+	</maintainer>
+</pkgmetadata>
