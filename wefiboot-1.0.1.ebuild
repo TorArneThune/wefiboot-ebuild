@@ -13,8 +13,9 @@ SRC_URI="https://github.com/TorArneThune/wefiboot/archive/v${PV}.tar.gz"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE="gtk"
 
-DEPEND="dev-util/gtk-update-icon-cache"
+DEPEND="gtk? ( dev-util/gtk-update-icon-cache )"
 RDEPEND="${DEPEND}
 	x11-libs/gksu
 	x11-themes/hicolor-icon-theme
@@ -29,13 +30,19 @@ src_install() {
 }
 
 pkg_preinst() {
-	gnome2_icon_savelist
+	if use gtk ; then
+		gnome2_icon_savelist
+	fi
 }
 
 pkg_postinst() {
-	gnome2_icon_cache_update
+	if use gtk ; then
+		gnome2_icon_cache_update
+	fi
 }
 
 pkg_postrm() {
-	gnome2_icon_cache_update
+	if use gtk ; then
+		gnome2_icon_cache_update
+	fi
 }
